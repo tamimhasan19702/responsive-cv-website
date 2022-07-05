@@ -171,3 +171,7 @@ img{
     bottom: var(--header-height);
     transition: all 0.4s ease-in-out;
 }
+
+.active-link{
+    color: var(--title-color);
+}
