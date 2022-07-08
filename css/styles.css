@@ -43,6 +43,69 @@ html{
     scroll-behavior: smooth;
 }
 
+.change-theme{
+    position: absolute;
+    right: 0;
+    top: 2.2rem;
+    display: flex;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.change-theme:hover{
+    color: var(--title-color);
+}
+
+body.dark-theme{
+
+   --title-color: #f2f2f2;
+   --text-color: #bfbfbf;
+   --container-color: #212121;
+   --container-color-alt: #181616;
+   --body-color: #2b2b2b;
+
+
+}
+
+.generate-pdf{
+    position: absolute;
+    top: 2.2rem;
+    left: 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+.generate-pdf:hover{
+    color: var(--title-color);
+}
+
+body.scale-cv{
+    --h1-font-size: 0.938rem;
+    --h2-font-size: 0.938rem;
+    --h3-font-size: 0.875rem;
+    --normal-font-size: 0.813rem;
+    --small-font-size: 0.75rem;
+    --smaller-font-size: 0.688rem;
+}
+
+.scale-cv .change-theme,
+.scale-cv .generate-pdf{
+    display: none;
+}
+
+.scale-cv .bd-container{
+    max-width: 600px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+/* ========================================================== */
+
 body{
     margin: 0 0 var(--header-height);
     padding: 0;
@@ -417,6 +480,7 @@ img{
     .resume-left,
     .resume-right{
      padding: 0 1.5rem;
+     word-wrap: break-word;
     }
     .section-title,
     .profile-description{
@@ -438,5 +502,8 @@ img{
     .interests-container{
         grid-template-columns: repeat(4, max-content);
         column-gap: 3.5rem;
+    }
+    .generate-pdf{
+        display: inline-block;
     }
 }
