@@ -94,12 +94,71 @@ body.scale-cv{
 }
 
 .scale-cv .bd-container{
-    max-width: 600px;
-    overflow: hidden;
+    max-width: 650px;
 }
 
+.scale-cv .section{
+    padding: 1.5rem 0 0.80rem;
+}
+.scale-cv .section-title{
+    margin-bottom: 0.75rem;
+}
+.scale-cv .resume-left,
+.scale-cv .resume-right{
+    padding: 0 1rem;
+}
+.scale-cv .home-img{
+    width: 90px;
+    height: 90px;
+}
+.scale-cv .home-container{
+    gap: 1.5rem;
+}
+.scale-cv .home-data{
+    gap: 0.25rem;
+}
 
+.scale-cv .home-address,
+.scale-cv .social-container{
+    gap: 0.75rem;
+}
+.scale-cv .home-icon,
+.scale-cv .social-icon,
+.scale-cv .interests-icon{
+    font-size: 1rem;
+}
+.scale-cv .education-container,
+.scale-cv .experience-container,
+.scale-cv .certificate-container{
+    gap: 1rem;
+}
+.scale-cv .education-time,
+.scale-cv .experience-time{
+    padding-right: 0.5rem;
+}
+.scale-cv .education-rounder,
+.scale-cv .experience-rounder{
+    width: 11px;
+    height: 11px;
+    margin-top: 0.22rem;
+}
+.scale-cv .education-line,
+.scale-cv .experience-line{
+    width: 1px;
+    height: 110%;
+    transform: translate(5px, 0);
+}
 
+.scale-cv .education-data,
+.scale-cv .experience-data{
+    gap: 0.25rem;
+}
+.scale-cv .skills-name{
+    margin-bottom: var(--mb-1);
+}
+.scale-cv .interests-container{
+    column-gap: 2.5rem;
+}
 
 
 
@@ -477,10 +536,12 @@ img{
         background-color: var(--container-color);
         box-shadow: 0 0 8px rgba(13,12,12,0.15);
     }
+    .resume-left{
+        background-color: var(--container-color-alt);
+    }
     .resume-left,
     .resume-right{
      padding: 0 1.5rem;
-     word-wrap: break-word;
     }
     .section-title,
     .profile-description{
