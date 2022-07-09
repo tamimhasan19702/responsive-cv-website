@@ -81,3 +81,38 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme' , getCurrentTheme())
     localStorage.setItem('selected-icon' , getCurrentIcon())
 })
+
+// =======================================================================
+
+
+function addScaleCv (){
+    document.body.classList.add('scale-cv')
+}
+function removeScaleCv(){
+    document.body.classList.remove('scale-cv')
+}
+
+let areaCv = document.querySelector('#area-cv');
+
+let resumeBtn =  document.querySelector('#resume-button');
+
+let opt = {
+    margin: 0 ,
+    filename: 'myCv.pdf',
+    image: {type: 'jpeg' , quality: 0.98 },
+    html2canvas: {scale: 4},
+    jsPDF : { format: 'a4', orientation: 'portrait'}
+}
+
+
+function generateResume(){
+    html2pdf(areaCv,opt)
+}
+
+resumeBtn.addEventListener('click' , () => {
+    addScaleCv();
+
+    generateResume();
+
+    setTimeout(removeScaleCv,5000);
+})
